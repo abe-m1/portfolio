@@ -110,7 +110,7 @@ body {
 .hero {
   height: 100vh;
   color: white;
-  background: url(/images/bg-stars.svg) no-repeat top center, url(/images/pattern-hills.svg) no-repeat bottom right, #1e1f29;
+  background: url(../images/bg-stars.svg) no-repeat top center, url(../images/pattern-hills.svg) no-repeat bottom right, #1e1f29;
   background-size: contain, 946px 151px, cover;
   display: flex;
   flex-direction: column;
