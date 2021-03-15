@@ -125,8 +125,60 @@ body {
       background-size: 100% 71%, contain, cover; } }
 
 .second {
-  height: 100vh;
-  background-color: #30243a; }
+  padding-top: 12rem;
+  background: linear-gradient(180deg, #30243a 0%, #020024 100%); }
+
+.second h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 4rem; }
+
+.row {
+  display: block; }
+  @media (min-width: 900px) {
+    .row {
+      display: flex;
+      width: 80%;
+      margin: auto;
+      max-width: 1400px;
+      padding-bottom: 10rem; } }
+
+.card {
+  width: 30%;
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #30243a 0%, #615db4 100%); }
+  .card:not(:last-of-type) {
+    margin-right: 4rem; }
+  .card__image {
+    margin-bottom: 1rem; }
+    @media (min-width: 900px) {
+      .card__image {
+        margin-bottom: 4rem; } }
+  .card__title {
+    margin-bottom: 3rem;
+    font-weight: 400;
+    font-size: 2.4rem; }
+  .card__details {
+    color: #8486a9;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 1.4; }
+    @media (min-width: 900px) {
+      .card__details {
+        margin-bottom: 2rem; } }
+  @media (min-width: 900px) {
+    .card {
+      margin-bottom: 3rem;
+      padding: 0; } }
+
+.third {
+  background: #020024;
+  background: linear-gradient(180deg, #020024 0%, #0e0e55 100%); }
 
 .main-headline {
   text-transform: uppercase;
@@ -140,11 +192,23 @@ body {
     .main-headline {
       margin-top: 6rem; } }
 
-.clock-container {
+.main-headline h2 {
+  font-size: 5rem; }
+
+.main-about {
+  display: flex;
+  width: 70%;
+  margin: auto; }
+
+.main-about p {
+  margin-left: 5rem;
+  font-size: 3rem; }
+
+.main-content {
   display: flex;
   margin-top: -24rem; }
   @media (min-width: 900px) {
-    .clock-container {
+    .main-content {
       margin-top: -14rem; } }
 
 .flip-clock {
@@ -171,128 +235,6 @@ body {
   @media (min-width: 900px) {
     .flip-clock__slot {
       font-size: 1.5rem; } }
-
-.card {
-  display: block;
-  position: relative;
-  padding-bottom: 0.72em;
-  font-size: 11vw;
-  line-height: 0.95; }
-  @media (min-width: 900px) {
-    .card {
-      font-size: 6vw;
-      box-shadow: 0 9px 5px -2px #191a24;
-      margin-bottom: 3rem; } }
-
-.card::after {
-  content: '';
-  position: absolute;
-  top: 45%;
-  left: -2px;
-  background-color: #191a24;
-  border-radius: 0 50px 50px 0;
-  z-index: 6;
-  width: 8px;
-  height: 10px; }
-  @media (min-width: 900px) {
-    .card::after {
-      width: 10px;
-      height: 15px; } }
-
-.card::before {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 10px;
-  top: 50%;
-  right: -2px;
-  transform: translateY(-50%);
-  background-color: #191a24;
-  border-radius: 50px 0 0 50px;
-  z-index: 6; }
-  @media (min-width: 900px) {
-    .card::before {
-      width: 10px;
-      height: 15px; } }
-
-.card__top,
-.card__bottom,
-.card__back::before,
-.card__back::after {
-  display: block;
-  height: 0.72em;
-  color: #d35070;
-  background: #22243a;
-  padding: 0.25em 0.25em;
-  border-radius: 0.15em 0.15em 0 0;
-  transform-style: preserve-3d;
-  width: 1.8em;
-  transform: translateZ(0); }
-
-.card__bottom {
-  color: #fb6087;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  border-top: solid 1px #000;
-  background: #343650;
-  border-radius: 0 0 0.15em 0.15em;
-  pointer-events: none;
-  overflow: hidden; }
-
-.card__bottom::after {
-  display: block;
-  margin-top: -0.72em; }
-
-.card__back::before,
-.card__bottom::after {
-  content: attr(data-value); }
-
-.card__back {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  left: 0%;
-  pointer-events: none; }
-
-.card__back::before {
-  position: relative;
-  z-index: -1;
-  overflow: hidden; }
-
-.flip .card__back::before {
-  animation: flipTop 0.3s cubic-bezier(0.37, 0.01, 0.94, 0.35);
-  animation-fill-mode: both;
-  transform-origin: center bottom; }
-
-.flip .card__back .card__bottom {
-  transform-origin: center top;
-  animation-fill-mode: both;
-  animation: flipBottom 0.6s cubic-bezier(0.15, 0.45, 0.28, 1); }
-
-@keyframes flipTop {
-  0% {
-    transform: rotateX(0deg);
-    z-index: 2; }
-  0%,
-  99% {
-    opacity: 0.99; }
-  100% {
-    transform: rotateX(-90deg);
-    opacity: 0; } }
-
-@keyframes flipBottom {
-  0%,
-  50% {
-    z-index: -1;
-    transform: rotateX(90deg);
-    opacity: 0; }
-  51% {
-    opacity: 0.99; }
-  100% {
-    opacity: 0.99;
-    transform: rotateX(0deg);
-    z-index: 5; } }
 
 ion-icon {
   font-size: 35px;
