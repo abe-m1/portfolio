@@ -46,16 +46,31 @@ body {
   }
 }
 
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .second {
   // height: 100vh;
   // background-color: #30243a;
   // background: rgb(48, 36, 58);
   padding-top: 12rem;
-  background: linear-gradient(
-    180deg,
-    rgba(48, 36, 58, 1) 0%,
-    rgba(2, 0, 36, 1) 100%
-  )
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(48, 36, 58, 1) 0%,
+  //   rgba(2, 0, 36, 1) 100%
+  // )
+
+  background: url(../images/bg-stars.svg) no-repeat bottom center,
+  linear-gradient(
+       180deg,
+       rgba(48, 36, 58, 1) 0%,
+       rgba(2, 0, 36, 1) 100%
+     );
+  // background-size: contain, 946px 151px, cover;
 }
 
 .second h2 {
@@ -84,12 +99,14 @@ body {
   padding: 3rem 2rem;
   text-align: center;
   border-radius: 5px;
-  background: linear-gradient(
-    180deg,
-    rgba(48, 36, 58, 1) 0%,
-    rgb(97, 93, 180) 100%
-  );
-  // border: 5px solid darkslategray;
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(48, 36, 58, 1) 0%,
+  //   rgb(97, 93, 180) 100%
+  // );
+  background-color: rgba(0,0,0,.1);
+  
+   border: 2px solid rgba(48, 36, 58, 1);
   &:not(:last-of-type){
     margin-right: 4rem;
   }
@@ -130,8 +147,14 @@ body {
 
 .third {
   // height: 100vh;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
+  // background: rgb(2, 0, 36);
+  // background: linear-gradient(
+  //   180deg,
+  //   rgba(2, 0, 36, 1) 0%,
+  //   rgb(14, 14, 85) 100%
+  // );
+
+  background: url(../images/bg-stars.svg),linear-gradient(
     180deg,
     rgba(2, 0, 36, 1) 0%,
     rgb(14, 14, 85) 100%
@@ -142,7 +165,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   margin-top: 14rem;
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
   width: 80%;
   font-size: 1.8rem;
   letter-spacing: 7px;
@@ -160,11 +183,16 @@ body {
   display: flex;
   width: 70%;
   margin: auto;
+
 }
 
 .main-about p {
   margin-left: 5rem;
   font-size: 3rem;
+}
+
+.main-about img {
+  border-radius: 5px;
 }
 
 .main-content{
