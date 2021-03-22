@@ -134,7 +134,7 @@ body {
   padding-top: 12rem;
   background: url(../images/bg-stars.svg) no-repeat bottom center, linear-gradient(180deg, #30243a 0%, #020024 100%); }
 
-.second h2 {
+.project-title {
   color: white;
   text-align: center;
   margin-bottom: 4rem;
@@ -153,7 +153,6 @@ body {
 .card {
   width: 30%;
   color: white;
-  padding: 3rem 2rem;
   text-align: center;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.1);
@@ -161,6 +160,8 @@ body {
   .card:not(:last-of-type) {
     margin-right: 4rem; }
   .card__image {
+    height: 200px;
+    width: 100%;
     margin-bottom: 1rem; }
     @media (min-width: 900px) {
       .card__image {
@@ -177,7 +178,8 @@ body {
     line-height: 1.4; }
     @media (min-width: 900px) {
       .card__details {
-        margin-bottom: 2rem; } }
+        margin-bottom: 2rem;
+        padding: 0 10px; } }
   @media (min-width: 900px) {
     .card {
       margin-bottom: 3rem;
@@ -219,6 +221,35 @@ body {
   @media (min-width: 900px) {
     .main-content {
       margin-top: -14rem; } }
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem; }
+
+.project-link {
+  color: #8486a9;
+  border: 1px solid #8486a9;
+  padding: 0.5rem 1rem;
+  text-decoration: none; }
+  .project-link:hover {
+    border: 1px solid #fb6087;
+    color: #fb6087; }
+
+.extra-left-margin {
+  margin-left: 1.5rem; }
+
+.see-more {
+  text-align: center;
+  margin-bottom: 8rem; }
+
+.see-more a {
+  color: #8486a9;
+  cursor: pointer;
+  display: inline-block; }
+  .see-more a:hover {
+    color: #fb6087; }
 
 .flip-clock {
   text-align: center;
